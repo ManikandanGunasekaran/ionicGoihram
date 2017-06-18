@@ -32,38 +32,15 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter" ng-controller="TodoCtrl" style="background: black;">
-        <!-- <div class="wrapper">
-<input type = "text" style="height: 50%;width: 100%; background: black;"/>
-        </div>
-
-
-        <div>
-            <div >
-          <label class="item item-input">
-            <span class="input-label">Username</span>
-            <input type="text">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Password</span>
-            <input type="password">
-          </label>
-          <button id="Login" class="button button-full button-positive">
-          LOGIN
-        </button>
-      </div>
-      </div> -->
+  <body ng-app="Goihram" ng-controller="loginController" >
 
 <button class="button icon-left  button-assertive button-full ion-social-google">Google</button>
       <button class="button icon-left  button-positive button-full ion-social-facebook">Facebook</button>
 <div style="text-align: center;">
-      <button class="button login button-outline button-positive"> Sign Up </button>
+      <button class="button login button-outline button-positive" ui-sref="userDetails"> Sign Up </button>
       <button class="button login button-outline button-positive"> Log In </button>
 </div>
-      <!-- <div style="text-align: center;">
-      <a href="#"> Sign Up</a>
-      <a href="#"> Forget Password</a>
-      </div> -->
+<div>{{a}}</div>
 
   </body>
 </html>
