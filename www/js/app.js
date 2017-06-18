@@ -1,20 +1,32 @@
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'Goihram' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var app = angular.module('Goihram', ['ionic'])
 
-.controller('TodoCtrl', function($scope) {
-  $scope.tasks = [
-    { title: 'Collect coins' },
-    { title: 'Eat mushrooms' },
-    { title: 'Get high enough to grab the flag' },
-    { title: 'Find the Princess' }
-  ];
+app.config(function($stateProvider) {
+  $stateProvider
+  // .state('index', {
+  //   url: '/',
+  //   templateUrl: 'home.html'
+  // })
+  .state('userDetails', {
+    url: '/userDetails',
+    templateUrl: 'userDetails.html'
+  });
+});
+
+app.controller('loginController', function($scope) {
+  $scope.a ="page1";
+ })
+
+app.controller('userDetailsController', function($scope) {
+  $scope.a ="page2";
+  
 })
 
-.run(function($ionicPlatform) {
+app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
