@@ -18,10 +18,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
   });
 
     $urlRouterProvider.otherwise("/logout.html");
+
+   
 });
 
-app.controller('loginController', function($scope) {
+
+app.controller('loginController', function($scope,$state) {
   $scope.a ="page1";
+   $scope.signUp = function(){
+    alert("Button clicked");
+      $state.go("userDetails");
+    }
  })
 
 app.controller('userDetailsController', function($scope) {
