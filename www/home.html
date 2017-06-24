@@ -1,6 +1,20 @@
-<button class="button icon-left  button-assertive button-full ion-social-google">Google</button>
-      <button class="button icon-left  button-positive button-full ion-social-facebook">Facebook</button>
-<div style="text-align: center;">
-      <button class="button login button-outline button-positive"> Sign Up </button>
-      <button class="button login button-outline button-positive"> Log In </button>
-</div>
+<ion-view>
+    <ion-content scroll="false">
+        <section class="login-container">
+            <div class = "col">
+               <!-- <img src="./img/ionic.png"/> -->
+            </div>
+            <div class = "col">
+               <button class="button icon-left  button-positive button-full ion-social-facebook">Facebook</button>
+               <button class="button icon-left  button-assertive button-full ion-social-google">Google</button>
+               <div style="text-align: center;">
+                  <button class="button login button-outline button-positive" ng-click="signUp()"> Sign Up </button>
+                  <button class="button login button-outline button-positive"> Log In </button>
+                </div>
+            </div>
+            <div class = "col">
+                
+            </div>            
+        </section>
+    </ion-content>
+</ion-view>
