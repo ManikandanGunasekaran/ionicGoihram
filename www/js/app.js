@@ -6,35 +6,23 @@
 var app = angular.module('Goihram', ['ionic'])
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+  
   // .state('index', {
   //   url: '/',
   //   templateUrl: 'home.html'
   // })
-  .state('userDetails', {
+  $stateProvider.state('userDetails', {
     url: '/userDetails',
     templateUrl: 'userDetails.html',
     controller:'userDetailsController'
   });
 
-    $urlRouterProvider.otherwise("/logout.html");
+    // $urlRouterProvider.otherwise("/logout.html");
 
    
 });
 
 
-app.controller('loginController', function($scope,$state) {
-  $scope.a ="page1";
-   $scope.signUp = function(){
-    alert("Button clicked");
-      $state.go("userDetails");
-    }
- })
-
-app.controller('userDetailsController', function($scope) {
-  $scope.a ="page2";
-  
-})
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
