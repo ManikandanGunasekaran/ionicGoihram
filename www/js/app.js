@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('Goihram', ['ionic'])
 
-app.config(function($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
   // .state('index', {
   //   url: '/',
@@ -13,8 +13,11 @@ app.config(function($stateProvider) {
   // })
   .state('userDetails', {
     url: '/userDetails',
-    templateUrl: 'userDetails.html'
+    templateUrl: 'userDetails.html',
+    controller:'userDetailsController'
   });
+
+    $urlRouterProvider.otherwise("/logout.html");
 });
 
 app.controller('loginController', function($scope) {
